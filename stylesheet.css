@@ -21,7 +21,11 @@ header {
 }
 .headerlogo{
 	width:200px;
-	margin: 0 auto;
+	margin-top: auto;
+	margin-bottom:auto;
+	margin-left: :25px;
+	margin-right: auto;
+	
 }
 .youtube-full{
 	width:50%;
