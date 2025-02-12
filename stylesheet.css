@@ -1,5 +1,6 @@
 body {
-  background-color:darkgray; //これは赤色
+  background-color:#BEBEBE;
+	font-family: "Lucida Console","monospace";
 }
 /* -------------------- */
 /* ▼メニューバーの装飾 */
@@ -7,7 +8,8 @@ body {
 ul.ddmenu {
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
    padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
-   background-color: darkgray; /* バーの背景色(濃い赤色) */
+   background-color: #BEBEBE; 
+   /*border-bottom: 2px solid #323232;*/
 }
 
 /* -------------------------- */
@@ -20,16 +22,17 @@ ul.ddmenu li {
    position: relative;     /* ★3:サブメニュー表示の基準位置にする */
 }
 ul.ddmenu a {
-   background-color: darkgray; /* メニュー項目の背景色(濃い赤色) */
-   color: black;              /* メニュー項目の文字色(白色) */
-   line-height: 40px;         /* メニュー項目のリンクの高さ(40px) */
+   background-color: #BEBEBE; /* メニュー項目の背景色(濃い赤色) */
+   color: #323232;              /* メニュー項目の文字色(白色) */
+   line-height: 50px;         /* メニュー項目のリンクの高さ */
    text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
    text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
-   font-weight: bold;         /* 太字にする */
+	font-family: "Lucida Console","monospace";
+   /*font-weight: bold;         /* 太字にする */
    display: block;            /* ★4:項目内全域をリンク可能にする */
 }
 ul.ddmenu a:hover {
-   background-color:black;/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+   background-color:#323232;/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
 	   color:white;
 }
 
@@ -57,16 +60,17 @@ ul.ddmenu li:hover ul {
 /* ▼サブメニュー項目の装飾 */
 /* ------------------------ */
 ul.ddmenu ul li {   /* ※A */
-   width: 135px;               /* サブメニュー1項目の横幅(135px) */
-   border-top: 1px solid black; /* 項目上側の枠線(ピンク色で1pxの実線) */
+   width: 125px;               /* サブメニュー1項目の横幅(135px) */
+  /* 項目上側の枠線 */
+	border-bottom: 2px solid #323232;
 }
 ul.ddmenu ul li a {   /* ※B */
-   line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
+   line-height: 50px;   /* サブメニュー1項目の高さ(35px) */
    text-align: left;    /* 文字列の配置(左寄せ) */
    padding-left: 5px;   /* 文字列前方の余白(5px) */
    font-weight: normal; /* 太字にはしない */
 }
 ul.ddmenu ul li a:hover {   /* ※C */
    background-color: white; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
-   color: black;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+   color: #323232;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
 }
