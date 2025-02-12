@@ -9,7 +9,7 @@ body {
 	color: #323232;
 }
 main{
-	margin-top:50px;
+	margin-top:150px;
 }
 header {
 	margin-top: 50px;
@@ -19,11 +19,14 @@ header {
 	align-items: center;
   	justify-content: space-between;
 }
+footer{
+text-align: center;
+}
 .headerlogo{
 	width:200px;
 	margin-top: auto;
 	margin-bottom:auto;
-	margin-left:25px;
+	margin-left:50px;
 	margin-right: auto;
 	
 }
@@ -36,6 +39,25 @@ header {
 	width: 100%;
 	height: 100%;
 	border-radius: 15px;
+}
+.snslogo{
+	width: 50px;
+}
+.sns{
+	display: flex;
+  	justify-content:space-between;	
+	}
+ul.sns li{
+	margin-top:150px;
+	text-align: center;
+	width: 200px;           /* メニュー項目の横幅(125px) */
+   display: inline-block;  /* ★1:横並びに配置する */
+   list-style-type: none; 
+}
+.snsicons{
+	margin-top:150px;
+	width:600px;
+	text-align: center;
 }
 /* -------------------- */
 /* ▼メニューバーの装飾 */
@@ -69,7 +91,7 @@ ul.ddmenu a {
 }
 ul.ddmenu a:hover {
    background-color:#323232;/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
-	   color:white;
+	   color:#D9D9D9;
 }
 
 /* ▼サブメニューは、とりあえず非表示にしておく */
@@ -98,15 +120,18 @@ ul.ddmenu li:hover ul {
 ul.ddmenu ul li {   /* ※A */
    width: 125px;               /* サブメニュー1項目の横幅(135px) */
   /* 項目上側の枠線 */
-	border-bottom: 2px solid #323232;
+	border-bottom: 2px solid #D9D9D9;
 }
-ul.ddmenu ul li a {   /* ※B */
+ul.ddmenu ul li a {  
+	background-color: rgba(0,0,0,0.50);
+	color: #D9D9D9;
+	
    line-height: 50px;   /* サブメニュー1項目の高さ(35px) */
    text-align: left;    /* 文字列の配置(左寄せ) */
    padding-left: 5px;   /* 文字列前方の余白(5px) */
    font-weight: normal; /* 太字にはしない */
 }
 ul.ddmenu ul li a:hover {   /* ※C */
-   background-color: white; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
-   color: #323232;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+   background-color: #323232;/* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
+   color: #D9D9D9;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
 }
