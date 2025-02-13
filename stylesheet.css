@@ -69,13 +69,14 @@ nav{
 display:block;
   font-weight:bold;
 padding: 2em;
-border-bottom: 1px dotted #CCC;
-  color:#333;
+border-bottom: 2px;
+	background-color: #D9D9D9;
+  color:#323232;
   text-decoration:none;
 }
 .ddmenu li a:hover
-{background-color:rgba(0,0,0,0.5);
-color:orange;}
+{background-color:#323232;
+color:#D9D9D9;}
 
 .ddmenu ul {
 	list-style: none;
@@ -87,7 +88,7 @@ color:orange;}
 .ddmenu{
   list-style: none;
   text-align:center;
-  background-color:rgba(255,255,255,0.5);
+  background-color:#323232;
   transition: 0.5s ease;/*滑らかに表示*/
 	display: none;
   -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
@@ -98,7 +99,7 @@ color:orange;}
 
 /*OPEN時の動き*/
 .ddmenu.active {
-display:flex;
+display:inline;
  -webkit-transform: translateX(0%);
  transform: translateX(0%);/*メニューを元の位置へ戻す*/
 
