@@ -14,27 +14,12 @@ main{
 	margin-top:150px;
 	text-align: center;
 }
-header {
-	margin-top: 50px;
-	height: 50px;
-	background-color:#D9D9D9;
-  	display: flex;
-	align-items: center;
-  	justify-content: space-between;
-}
+
 footer{
 text-align: center;
 }
-.headerlogo{
-	width:200px;
-	margin-top: auto;
-	margin-bottom:auto;
-	margin-left:50px;
-	margin-right: auto;
-	
-}
 .youtube-full{
-	width:50%;
+	width:100%;
 	aspect-ratio:16 / 9;
 	margin: 0 auto;
 }
@@ -60,24 +45,174 @@ text-align: center;
 /* -------------------- */
 /* ▼メニューバーの装飾 */
 /* -------------------- */
-ul.ddmenu {
+nav{
+ width: 100%;
+ height: 50px;
+ position: relative;
+ background: #D9D9D9;
+}
+
+.drawer{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ position: relative;
+ height: 50px;
+ padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.ddmenu li a {
+	
+display:block;
+  font-weight:bold;
+padding: 2em;
+border-bottom: 1px dotted #CCC;
+  color:#333;
+  text-decoration:none;
+}
+.ddmenu li a:hover
+{background-color:rgba(0,0,0,0.5);
+color:orange;}
+
+.ddmenu ul {
+	list-style: none;
+   display: none;       /* ★1:標準では非表示にする */
+   margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+   padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+   position: absolute;  /* ★4:絶対配置にする */
+}
+.ddmenu{
+  list-style: none;
+  text-align:center;
+  background-color:rgba(255,255,255,0.5);
+  transition: 0.5s ease;/*滑らかに表示*/
+  -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
+
+/*  transform: translateX(-100%);/*右から出す場合は、マイナス100%としてください*/
+
+}
+
+/*OPEN時の動き*/
+.ddmenu.open {
+ -webkit-transform: translateX(0%);
+ transform: translateX(0%);/*メニューを元の位置へ戻す*/
+
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+  right:15px;
+}
+ 
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    -webkit-transition: .35s ease-in-out;	/*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;		/*変化の速度を指定*/
+    transition: .35s ease-in-out;			/*変化の速度を指定*/
+ 
+}
+ /*各ボーダー少しずつずらす*/
+.Toggle span:nth-child(1) {
+    top:5px;
+}
+ .Toggle span:nth-child(2) {
+    top: 18px;
+}
+ .Toggle span:nth-child(3) {
+    top: 32px;
+}
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+/* 1番目のspanをマイナス45度に */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ 
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*----------------------------------ここからPCモニターの記述-----------*/
+@media screen and (min-width: 600px) {
+	.c1{
+		width:60%;
+		margin:0 auto;
+	}	
+	
+	header {
+	margin-top: 50px;
+	height: 50px;
+	background-color:#D9D9D9;
+  	display: flex;
+	align-items: center;
+  	justify-content: space-between;
+}
+
+/*ロゴの大きさを調整*/
+.headerlogo{
+	width:200px;
+	margin-top: auto;
+	margin-bottom:auto;
+	margin-left:50px;
+	margin-right: auto;
+}
+
+nav{
+ display: flex;
+}
+
+.Toggle{
+ display: none;
+}
+.ddmenu {
+	text-align: right;
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
-   padding: 0px 0px 0px 15px; /* メニューバー内側の余白(左に15px) */
+   padding-right: 15px; /* メニューバー内側の余白(左に15px) */
    background-color: #D9D9D9; 
    /*border-bottom: 2px solid #323232;*/
 	float:right;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
 }
-
 /* -------------------------- */
 /* ▼メインメニュー項目の装飾 */
 /* -------------------------- */
 ul.ddmenu li {
-   width: 125px;           /* メニュー項目の横幅(125px) */
-   display: inline-block;  /* ★1:横並びに配置する */
+   width: 125px;           /* メニュー項目の横幅
+	(125px) */
+	height: auto;
+	display: inline-block;  /* ★1:横並びに配置する */
    list-style-type: none;  /* ★2:リストの先頭記号を消す */
    position: relative;     /* ★3:サブメニュー表示の基準位置にする */
 }
-ul.ddmenu a {
+.ddmenu li a {
+		padding: 0;
+}
+.ddmenu li a:hover {
+   background-color:#323232;/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+	   color:#D9D9D9;
+}
+
+.ddmenu a {
+	padding: 0;
    background-color: #D9D9D9; /* メニュー項目の背景色(濃い赤色) */
    color: #323232;              /* メニュー項目の文字色(白色) */
    line-height: 50px;         /* メニュー項目のリンクの高さ */
@@ -87,19 +222,11 @@ ul.ddmenu a {
    /*font-weight: bold;         /* 太字にする */
    display: block;            /* ★4:項目内全域をリンク可能にする */
 }
-ul.ddmenu a:hover {
-   background-color:#323232;/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
-	   color:#D9D9D9;
-}
-
 /* ▼サブメニューは、とりあえず非表示にしておく */
-ul.ddmenu ul {
-   display: none;         /* ★5:非表示にする */
-}
 /* -------------------- */
 /* ▼サブメニューの装飾 */
 /* -------------------- */
-ul.ddmenu ul {
+.ddmenu ul {
    display: none;       /* ★1:標準では非表示にする */
    margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
    padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
@@ -109,27 +236,26 @@ ul.ddmenu ul {
 /* ---------------------------------- */
 /* ▼サブメニューがある場合に開く処理 */   /* ※サブメニューが1階層しか存在しない場合の記述 */
 /* ---------------------------------- */
-ul.ddmenu li:hover ul {
+.ddmenu li:hover ul {
    display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
 }
 /* ------------------------ */
 /* ▼サブメニュー項目の装飾 */
 /* ------------------------ */
-ul.ddmenu ul li {   /* ※A */
-   width: 125px;               /* サブメニュー1項目の横幅(135px) */
-  /* 項目上側の枠線 */
-	border-bottom: 2px solid #D9D9D9;
+.ddmenu ul li {   /* ※A */
+   width: 125px;
+	border-top: 2px solid #D9D9D9;
 }
-ul.ddmenu ul li a {  
+.ddmenu ul li a {  
 	background-color: rgba(0,0,0,0.50);
 	color: #D9D9D9;
-	
+	border-bottom: none;
    line-height: 50px;   /* サブメニュー1項目の高さ(35px) */
-   text-align: left;    /* 文字列の配置(左寄せ) */
-   padding-left: 5px;   /* 文字列前方の余白(5px) */
+   text-align: center;    /* 文字列の配置(左寄せ) */
    font-weight: normal; /* 太字にはしない */
 }
-ul.ddmenu ul li a:hover {   /* ※C */
+.ddmenu ul li a:hover {   /* ※C */
    background-color: #323232;/* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
-   color: #D9D9D9;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+   color: #D9D9D9;            /* サブメニュー項目にマウスが載ったときの文字色 */
+}
 }
