@@ -8,7 +8,14 @@
 </head>
 	
 <body>
-	<script src="tgl.js"></script>
+	<script>
+		const tgl = document.querySelector('#js-tgl'); //js-hamburgerの要素を取得し、変数hamに格納
+		const menu = document.querySelector('#js-menu'); //js-navの要素を取得し、変数navに格納
+		tgl.addEventListener('click', function () { //ハンバーガーメニューをクリックしたら
+			tgl.classList.toggle('active'); // ハンバーガーメニューにactiveクラスを付け外し
+			menu.classList.toggle('active'); // ナビゲーションメニューにactiveクラスを付け外し
+		});
+	</script>
 	 <header>
 		 <nav>
 		 <div class="drawer">
@@ -17,13 +24,13 @@
 				<img src="logo_bk.png" width ="180px" alt="ZEROLAB_LOGO">
       		</a>
 		</div>
-		 <div class="Toggle">
+		 <div class="Toggle" id="js-tgl">
 			 <span></span>
 			 <span></span>
 			 <span></span>
 		 </div>
 	</div>
- 	  <ul class="ddmenu">
+ 	  <ul class="ddmenu" id="js-menu">
 		  <li> <a href="./index.html">Home</a> </li>
 		  <li><a href="#">部門別</a>
 		    <ul>
