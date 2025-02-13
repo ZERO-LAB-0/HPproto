@@ -96,7 +96,7 @@ color:orange;}
 }
 
 /*OPEN時の動き*/
-.ddmenu.open {
+.ddmenu.active {
  -webkit-transform: translateX(0%);
  transform: translateX(0%);/*メニューを元の位置へ戻す*/
 
