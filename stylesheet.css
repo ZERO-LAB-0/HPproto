@@ -89,6 +89,7 @@ color:orange;}
   text-align:center;
   background-color:rgba(255,255,255,0.5);
   transition: 0.5s ease;/*滑らかに表示*/
+	display: none;
   -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
 
 /*  transform: translateX(-100%);/*右から出す場合は、マイナス100%としてください*/
@@ -97,6 +98,7 @@ color:orange;}
 
 /*OPEN時の動き*/
 .ddmenu.active {
+display:flex;
  -webkit-transform: translateX(0%);
  transform: translateX(0%);/*メニューを元の位置へ戻す*/
 
@@ -177,18 +179,19 @@ color:orange;}
 
 nav{
  display: flex;
+ justify-content: space-between;
 }
 
 .Toggle{
  display: none;
 }
 .ddmenu {
+	display:flex;
 	text-align: right;
    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
    padding-right: 15px; /* メニューバー内側の余白(左に15px) */
    background-color: #D9D9D9; 
    /*border-bottom: 2px solid #323232;*/
-	float:right;
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
@@ -242,7 +245,8 @@ ul.ddmenu li {
 /* ------------------------ */
 /* ▼サブメニュー項目の装飾 */
 /* ------------------------ */
-.ddmenu ul li {   /* ※A */
+.ddmenu ul li { 
+	z-index: 999;
    width: 125px;
 	border-top: 2px solid #D9D9D9;
 }
