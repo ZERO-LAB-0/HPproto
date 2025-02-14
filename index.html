@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   	<title>ZEROLABホームページ</title>
  	<link rel="stylesheet" href="reset.css">
- 	<link rel="stylesheet" href="stylesheet.css">
+ 	<link rel="stylesheet" href="style.css">
 	
 </head>
-	
+
 <body>
 	 <header>
 		 <nav>
@@ -25,31 +25,46 @@
 			 <span></span>
 		 </div>
 	</div>
- 	  <ul class="ddmenu" id="js-menu">
-		  <li> <a href="./index.html">Home</a> </li>
-		  <li><a href="#">部門別</a>
-		    <ul>
-		      <li><a href="#">ギター部門</a></li>
-		      <li><a href="#">PC部門</a></li>
-		      <li><a href="#">ゲーム部門</a></li>
+ 	  <ul class="ddmenu " id="js-menu">
+		  <li class = "menu__item"> 
+			  <div>
+				  <a href="./index.html">Home</a>
+			  </div>
+		  </li>
+		  <li class = "menu__item">
+			  <div href="#">
+			  <a>部門別</a>
+			  </div>
+			  <button type="button" class="ddtgl" id="js-ddtgl"></button>
+		    <ul class= "hdrdd">
+		      <li href="#"><a>ギター部門</a></li>
+		      <li href="#"><a>PC部門</a></li>
+		      <li href="#"><a>ゲーム部門</a></li>
 	        </ul>
 	      </li>
-		  <li><a href="#">製作物</a>
-		    <ul>
-		      <li><a href="#">ハードウェア</a></li>
-		      <li><a href="#">ソフトウェア</a></li>
+		  <li class = "menu__item">		<div href="#">
+			  <a>製作物</a>
+				</div>
+		    	<ul class= "hdrdd">
+					
+		      <li><a href="#" class= "drop-menu__link">ハードウェア</a></li>
+		      <li><a href="#" class= "drop-menu__link">ソフトウェア</a></li>
 	        </ul>
 	      </li>
-		  <li><a href="#">Downloads</a>
-		    <ul>
-		      <li><a href="#">A</a></li>
-		      <li><a href="#">B</a></li>
-		      <li><a href="#">C</a></li>
-		      <li><a href="#">D</a></li>
+		  <li class = "menu__item">		<div href="#">
+			  <a>Downloads</a>
+			  </div>
+		    <ul class= "hdrdd">
+		      <li href="#"><a class= "drop-menu__link">A</a></li>
+		      <li href="#"><a class= "drop-menu__link">B</a></li>
 	        </ul>
-	      </li>
-		  <li><a href="./sns.html">SNS</a> </li>
-	  </ul>
+	      </li>  
+		  <li class="menu__item">
+			  <div href="./sns.html">
+			  <a>SNS</a>
+			  </div>
+		  </li>
+      </ul>
 	</nav>
 </header>
 	<main>
