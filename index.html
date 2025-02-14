@@ -9,14 +9,13 @@
  	<link rel="stylesheet" href="style.css">
 	
 </head>
-
 <body>
 	 <header>
 		 <nav>
 		 <div class="drawer">
 		 <div class="headerlogo">
       		<a href="index">
-				<img src="logo_bk.png" width ="180px" alt="ZEROLAB_LOGO">
+				<img src="logo_fullbk.png" width ="180px" alt="ZEROLAB_LOGO">
       		</a>
 		</div>
 		 <div class="Toggle" id="js-tgl">
@@ -25,7 +24,7 @@
 			 <span></span>
 		 </div>
 	</div>
- 	  <ul class="ddmenu " id="js-menu">
+ 	  <ul class="ddmenu" id="js-menu">
 		  <li class = "menu__item"> 
 			  <div>
 				  <a href="./index.html">Home</a>
@@ -36,34 +35,29 @@
 			  <a>部門別</a>
 			  </div>
 			  <button type="button" class="ddtgl" id="js-ddtgl"></button>
-		    <ul class= "hdrdd">
+		    <ul class="hdrdd" id="js-ddmenu">
 		      <li href="#"><a>ギター部門</a></li>
 		      <li href="#"><a>PC部門</a></li>
 		      <li href="#"><a>ゲーム部門</a></li>
 	        </ul>
 	      </li>
-		  <li class = "menu__item">		<div href="#">
-			  <a>製作物</a>
-				</div>
-		    	<ul class= "hdrdd">
-					
-		      <li><a href="#" class= "drop-menu__link">ハードウェア</a></li>
-		      <li><a href="#" class= "drop-menu__link">ソフトウェア</a></li>
-	        </ul>
-	      </li>
-		  <li class = "menu__item">		<div href="#">
-			  <a>Downloads</a>
-			  </div>
-		    <ul class= "hdrdd">
-		      <li href="#"><a class= "drop-menu__link">A</a></li>
-		      <li href="#"><a class= "drop-menu__link">B</a></li>
-	        </ul>
-	      </li>  
 		  <li class="menu__item">
 			  <div href="./sns.html">
 			  <a>SNS</a>
 			  </div>
 		  </li>
+		  <li class = "menu__item">		<div href="#">
+			  <a>Downloads</a>
+			  </div>
+			  
+			  <button type="button" class="ddtgl" id="js-ddtgl1"></button>
+		    <ul class= "hdrdd" id="js-ddmenu1">
+		      <li href="#"><a class= "drop-menu__link">A</a></li>
+		      <li href="#"><a class= "drop-menu__link">B</a></li>
+			<li href="#"><a class= "drop-menu__link">C</a></li>
+	        </ul>
+			  
+	      </li>  
       </ul>
 	</nav>
 </header>

@@ -8,11 +8,37 @@ tgl.addEventListener('click', () => {
 });
 
 const dd = document.querySelector('#js-ddtgl');
+const ddmenu = document.querySelector('#js-ddmenu');
 
 dd.addEventListener('click', () => {
- dd.classList.toggle('active');
+	if(ddmenu.classList.contains('hovered')){
+		ddmenu.classList.remove('hovered');
+	}
+	if(ddmenu.classList.contains('active')){
+		ddmenu.classList.remove('active');
+		dd.classList.remove('active');
+	}
+	else{
+		ddmenu.classList.add('active');
+		dd.classList.add('active');
+	}
 });
+const dd1 = document.querySelector('#js-ddtgl1');
+const ddmenu1 = document.querySelector('#js-ddmenu1');
 
+dd1.addEventListener('click', () => {
+	if(ddmenu1.classList.contains('hovered')){
+		ddmenu1.classList.remove('hovered');
+	}
+	if(ddmenu1.classList.contains('active')){
+		ddmenu1.classList.remove('active');
+		dd1.classList.remove('active');
+	}
+	else{
+		ddmenu1.classList.add('active');
+		dd1.classList.add('active');
+	}
+});
 // ドロップダウンメニューのマウスオーバー処理
 'use strict';
 
