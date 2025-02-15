@@ -38,8 +38,8 @@ ul.hdrdd { height: 0px; transition: height 0.3s 0s ease-out; }
 ul.hdrdd.active { height: 150px; }
 ul.hdrdd.active li { height: 50px; }
 ul.hdrdd.active li a {display: block; opacity: 1;}
-ul.hdrdd li { background-color: var(--colbk); opacity: 0; transition : opacity 0.2s 0.2s ease-out; display: flex; align-items: center; }
-ul.hdrdd li a { color: var(--colwh); height:0; transition: height 0.3s 0.3s ease-out; display: none; padding-left: 50px; border-bottom: 2px; text-decoration: none; }
+ul.hdrdd li { background-color: var(--colbk);  display: flex; align-items: center; }
+ul.hdrdd li a { color: var(--colwh); opacity: 0; transition : opacity 0.2s 0.2s ease-out; display: none; padding-left: 50px; border-bottom: 2px; text-decoration: none; }
 
 li.menu__item { position: relative; background-color: var(--colwh); color: var(--colbk); align-items: center; }
 li.menu__item div { margin-right: 100px; display: flex; min-height: 49px; align-items: center; }
