@@ -37,7 +37,7 @@ nav { width: 100%; height: 50px; position: relative; background: var(--colwh); }
 ul.hdrdd { height: 0px; transition: height 0.3s 0s ease-out; }
 ul.hdrdd.active { height: 150px; }
 ul.hdrdd.active li { height: 50px; }
-ul.hdrdd.active li a {height: 100%;}
+ul.hdrdd.active li a {height: auto;}
 ul.hdrdd li { background-color: var(--colbk); height: 0px; transition : height 0.3s 0s ease-out; display: flex; align-items: center; }
 ul.hdrdd li a { color: var(--colwh); height:0; transition: height 0.3s 0.3s ease-out; display: block; padding-left: 50px; border-bottom: 2px; text-decoration: none; }
 
