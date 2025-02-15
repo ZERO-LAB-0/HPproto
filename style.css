@@ -1,9 +1,10 @@
 @charset "UTF-8";
-:root { --colbk: #323232; --colwh: #D9D9D9; font-family: "Lucida Console","monospace"; }
+:root { --colbk: #323232; --colwh: #D9D9D9;}
 
 a { color: var(--colbk); }
 
-body { background-color: var(--colwh); font-family: "Lucida Console","monospace"; color: var(--colbk); }
+body { background-color: var(--colwh); font-family: "Lucida Console","Osaka−等幅","Osaka-Mono"
+, monospace; color: var(--colbk); }
 
 main { margin-top: 150px; text-align: center; }
 
