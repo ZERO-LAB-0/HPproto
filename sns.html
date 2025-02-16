@@ -1,50 +1,69 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ZEROLABホームページ</title>
-  <link rel="stylesheet" href="stylesheet.css">
+ 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  	<title>SNS</title>
+ 	<link rel="stylesheet" href="reset.css">
+ 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="sns.css">
 </head>
-	
 <body>
 	 <header>
+		 <nav>
+		 <div class="drawer">
 		 <div class="headerlogo">
-      		<a href="./index.html">
-				<img src="logo_bk.png" width ="180px" alt="ZEROLAB_LOGO">
+      		<a href="index">
+				<img src="logo_fullbk.png" width ="180px" alt="ZEROLAB_LOGO">
       		</a>
 		</div>
-	  <ul class="ddmenu">
-		  <li> <a href="./index.html">Home</a> </li>
-		  <li><a href="#">部門別</a>
-		    <ul>
+		 <div class="Toggle" id="js-tgl">
+			 <span></span>
+			 <span></span>
+			 <span></span>
+		 </div>
+	</div>
+ 	  <ul class="ddmenu" id="js-menu">
+		  <li class = "menu__item"> 
+				<div>  <a 
+					 href="./index.html">Home
+			  </a></div>
+		  </li>
+		  <li class = "menu__item">
+			  <div>
+			  <a href="#">部門別</a></div>
+			  <button type="button" class="ddtgl" id="js-ddtgl"></button>
+		    <ul class="hdrdd" id="js-ddmenu">
 		      <li><a href="#">ギター部門</a></li>
 		      <li><a href="#">PC部門</a></li>
 		      <li><a href="#">ゲーム部門</a></li>
 	        </ul>
 	      </li>
-		  <li><a href="#">製作物</a>
-		    <ul>
-		      <li><a href="#">ハードウェア</a></li>
-		      <li><a href="#">ソフトウェア</a></li>
+		  <li class="menu__item">
+			  <div>
+			  <a href="./sns.html">
+				 SNS</a></div>
+		  </li>
+		  <li class = "menu__item">		
+			  <div>
+			  <a href="./downloads.html">Downloads</a>
+			  </div>
+			  
+			  <button type="button" class="ddtgl" id="js-ddtgl1"></button>
+		    <ul class= "hdrdd" id="js-ddmenu1">
+		      <li><a href="#" class= "drop-menu__link">A</a></li>
+		      <li><a  href="#" class= "drop-menu__link">B</a></li>
+			<li><a  href="#" class= "drop-menu__link">C</a></li>
 	        </ul>
-	      </li>
-		  <li><a href="#">Downloads</a>
-		    <ul>
-		      <li><a href="#">A</a></li>
-		      <li><a href="#">B</a></li>
-		      <li><a href="#">C</a></li>
-		      <li><a href="#">D</a></li>
-	        </ul>
-	      </li>
-		  <li><a href="./sns.html">SNS</a> </li>
-		  <li><a href="./contact.html">Contact</a>
-		    <ul>
-	        </ul>
-	      </li>
-	  </ul>
+			  
+	      </li>  
+      </ul>
+	</nav>
 </header>
 	<main>
-		<h1>SNS</h1>
+		<div class= "c1">
+     <h1>SNS</h1>
 		<div class ="snsicons">
 			<div class ="icon"><a href="https://x.com/ZERO_LAB_0">
 			<img src="logo-black.png"  alt="X_LOGO" class="snslogo"></a>
@@ -59,11 +78,15 @@
 				<h5><a style ="text-decoration: none;" href="https://www.instagram.com/_zero_lab_/">Instagram</a></h5>
 			</div>
 		</div>
+		</div>
 	</main>
 <footer>
-	<h5>
+	
+	<h5 style="text-align:center">
 		© 2025 by ZEROLAB. All rights reserved.
 	</h5>
 </footer>
+	<script src="tgl.js">
+	</script>
 </body>
 </html>

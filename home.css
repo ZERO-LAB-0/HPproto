@@ -1,0 +1,4 @@
+/* CSS Document */
+.c1 { width: 100%; margin: 0 auto; }
+
+@media screen and (min-width: 600px) { .c1 { width: 60%; } }
