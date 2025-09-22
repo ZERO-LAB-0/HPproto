@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+:root { --colbk: #323232; --colwh: #D9D9D9; }
+
+/* プロフィールページ専用スタイル */
+.middle { display: inline-block; }
+
+.profile { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.8; }
+.profile .logob { width: 100%; }
+.profile .logob img { width: 100%; }
+.profile .nakanohito { text-align: center; margin-bottom: 2rem; }
+.profile .nakanohito img { width: 100px; }
+.profile .nakanohito .profile__avatar { width: 200px; height: 200px; border-radius: 1em; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); }
+.profile .nakanohito .profile__tagline { font-size: 1.1rem; color: #666; }
+.profile__about, .profile__skills, .profile__history { margin-bottom: 2rem; }
+.profile__about h2, .profile__skills h2, .profile__history h2 { font-size: 1.5rem; margin-bottom: 0.75rem; border-left: 4px solid #000; padding-left: 0.5rem; }
+.profile__about p, .profile__skills p, .profile__history p { font-size: 1rem; }
+.profile__about ul, .profile__skills ul, .profile__history ul { list-style: disc inside; padding-left: 1rem; }
+.profile__about ul li, .profile__skills ul li, .profile__history ul li { margin-bottom: 0.5rem; }
+
+@media screen and (min-width: 600px) { .middle { display: flex; } }
