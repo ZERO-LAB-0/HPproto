@@ -5,14 +5,10 @@ a { color: var(--colbk); }
 
 body { font-family: "Lucida Console","Osaka−等幅","Osaka-Mono", monospace; background-color: var(--colwh); color: var(--colbk); }
 
-main { margin-top: 150px; margin-bottom: 150px; }
+main { margin-top: 50px; margin-bottom: 150px; }
 
 footer { text-align: center; }
 footer h5 { padding: 10px; }
-
-.youtube-full { width: 100%; aspect-ratio: 16 / 9; margin: 0 auto; }
-
-.youtube-full iframe { width: 100%; height: 100%; border-radius: 15px; }
 
 .ftrsnsicons { width: 40%; margin: 0 auto; padding-top: 50px; display: flex; /* 横並びにするためのflexbox */ justify-content: space-evenly; /* 等間隔に配置 */ align-items: center; /* 縦方向で中央揃え */ gap: 5px; /* 画像間の隙間を指定（任意） */ }
 
@@ -82,10 +78,12 @@ li.menu__item div.active a { color: var(--colwh); }
   li.menu__item { display: inline-block; /* ★1:横並びに配置する */ /* ★3:サブメニュー表示の基準位置にする */ width: 125px; }
   li.menu__item div { transition: 0.2s ease; width: 125px; background-color: var(--colwh); }
   li.menu__item div a { font-size: 1.2em; color: var(--colbk); margin: 0 auto; padding: 0; }
-  li.menu__item div:hover { background-color: var(--colbk); }
-  li.menu__item div:hover a { color: var(--colwh); }
+  li.menu__item div::before { transition: 0.2s ease; content: ""; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; border: 2px solid var(--colbk); border-radius: 8px; pointer-events: none; /* 一部欠けを表現するためにマスク */ mask-image: radial-gradient(circle 5px at 0 0, transparent 80%, black 100%), radial-gradient(circle 5px at 100% 0, transparent 80%, black 100%), radial-gradient(circle 5px at 0 100%, transparent 80%, black 100%), radial-gradient(circle 5px at 100% 100%, transparent 80%, black 100%); mask-repeat: no-repeat; mask-position: top left, top right; mask-size: 0 100%; }
+  li.menu__item div:hover { position: relative; display: inline-block; padding: 0px; /* オフセットの余白 */ border-radius: 10px; /* 内側の角丸 */ }
+  li.menu__item div:hover::before { mask-size: 10px 100%; }
   ul.hdrdd { display: none; /* ★1:標準では非表示にする */ margin: 0px; /* ★2:サブメニュー外側の余白(ゼロ) */ padding: 0px; /* ★3:サブメニュー内側の余白(ゼロ) */ position: absolute; /* ★4:絶対配置にする */ }
-  ul.hdrdd li { z-index: 2; height: 50px; width: 125px; border-top: 2px solid var(--colwh); background-color: rgba(0, 0, 0, 0.5); }
-  ul.hdrdd li a { font-size: 1.2em; visibility: visible; opacity: 1; margin: 0 auto; padding: 0; color: var(--colwh); }
-  ul.hdrdd li:hover { transition: 0.2s ease; background-color: var(--colbk); }
+  ul.hdrdd li { background-color: var(--colwh); z-index: 2; height: 50px; width: 125px; border-radius: 10px; }
+  ul.hdrdd li a { font-size: 1.2em; visibility: visible; opacity: 1; margin: 0 auto; padding: 0; color: var(--colbk); }
+  ul.hdrdd li:hover { transition: 0.2s ease; background-color: rgba(0, 0, 0, 0.5); }
+  ul.hdrdd li:hover a { color: var(--colwh); }
   ul.hdrdd.hovered { display: block; } }
