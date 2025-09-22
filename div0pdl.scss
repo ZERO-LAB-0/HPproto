@@ -4,9 +4,6 @@
 --colbk: #323232;
 --colwh: #D9D9D9;
 }
-body{
-	height: 100%;
-}
 hooter{
 	margin-bottom: 0;
 }
@@ -70,6 +67,7 @@ h5 a{
             padding:10px;
 			border-radius: 10px 10px 0 0;
 			background: white;
+			z-index: 2;
 		}
 		.ids{
 			display: flex;
