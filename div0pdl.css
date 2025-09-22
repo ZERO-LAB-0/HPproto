@@ -48,7 +48,7 @@ h5 a { font-size: 1em; }
 .top-R .extras .caution { height: 4em; margin-bottom: 0; vertical-align: bottom; }
 .top-R .extras .caution p { text-align: justify; font-size: 10px; }
 .top-R .extras .caution .caution-text { display: flex; }
-.top-R .extras .caution .caution-text img { width: 3.5em; }
+.top-R .extras .caution .caution-text img { width: 3.5em; mix-blend-mode: multiply; }
 .top-R .extras .caution .caution-text h3 { padding-right: 0.5em; font-size: 16px; align-self: flex-end; }
 
 @media screen and (min-width: 600px) { .topview { display: flex; }

@@ -180,6 +180,7 @@ h5 a{
 				display: flex;
 				& img{
 					width:3.5em;
+					mix-blend-mode: multiply;
 				}
 				& h3{
 					padding-right: 0.5em;
