@@ -37,14 +37,15 @@ h5 a{
 	vertical-align: middle;
 }
 .main {
-  padding: 3rem;
+  padding: 0 3rem;
 }
 .product-image{
 	width: 100%;
     img {
-     width: 100%;
-      border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    	width: 100%;
+        border-radius: 8px;
+  		box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		margin-bottom: 2em;
     }
 }
 .topview{
@@ -55,34 +56,33 @@ h5 a{
 	width: 100%;
 	
 	.tab{
+		height: auto;
+		padding-top: 0;
 		display:flex;
 		justify-content:space-between;
 		
 		.product-title{
+			height:2.5em;
+			width: 8em;
 			display:flex;
 			align-items:center;
-			font-size:15px;
+			font-size:13px;
 			text-align:center;
-			margin-top: 30px;
-            padding:10px;
+            padding:0.5em;
+			margin-bottom: 0px;
+			margin-top: auto;
 			border-radius: 10px 10px 0 0;
 			background: white;
 			z-index: 2;
 		}
 		.ids{
-			display: flex;
-			
-			.product-id{
-				display: flex;
-				align-items:flex-end;
-				padding: 0px 0px 5px 0px;
-				font-size:15px;
-			}
-			.A-0{
-				display: flex;
-				align-items:flex-end;
-				font-size:75px;
-				padding: 0px 10px 0px 5px;
+			width: 225px;
+			font-size:15px;
+			& img{
+				display: block;
+				margin: 0 0 0 auto;
+				width:50%;
+				min-width: 150px;
 			}
 		}
 		
@@ -102,13 +102,13 @@ h5 a{
 			padding-right: 5px;
 		}
 		.code-name{
-			letter-spacing: 0.1em;
-			font-size:18px;
+			letter-spacing: 0.2em;
+			font-size:15px;
 			text-align:center;
-			padding: 30px;
+			padding: 2em 1em;
 		}
 		.description{
-			padding: 10px;
+			padding: 1em;
 		}
 	}
 	.price{
@@ -123,6 +123,7 @@ h5 a{
 		align-items:flex-end;
 		justify-content:space-between;
 		.qr{
+			max-width:50%;
 			position: relative;
 			display:flex;
 			& img{
@@ -189,16 +190,48 @@ h5 a{
 		}
 	}
 }
-@media screen and (min-width: 600px){
+.description-2{
+	margin-top: 2em;
+}
+h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid #000;
+      padding-left: 0.5rem;
+    }
+@media screen and (min-width: 800px){
 	.topview{
 	display: flex;
 	}
 	.product-image{
-		width: 60%;
+		width: 50%;
 		padding-right: 1rem;
 	}
 	.top-R{
-	width: 40%;
+	width: 50%;
+	}
+	.tab{
+		height:auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.ids{
+		margin-top: 0px;
+		margin-bottom: 0.25em;
+		display: flex;
+		justify-content: flex-end;
+		& p{
+			width:6em;
+			height: 1em;
+			margin: auto 0 0.15em auto;
+			display: block;
+		}
+		& img{
+			margin: 0;
+			width:50%;
+			
+			min-width: 50px;
+		}
 	}
 }
 	
