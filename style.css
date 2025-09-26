@@ -5,7 +5,7 @@ html { height: 100%; }
 
 body { font-family: "Lucida Console","Osaka−等幅","Osaka-Mono", monospace; background-color: var(--colwh); color: var(--colbk); min-height: 100%; display: flex; flex-direction: column; }
 
-main { flex: 1; margin-top: 50px; margin-bottom: 150px; }
+main { flex: 1; margin-top: 10px; margin-bottom: 150px; }
 
 footer { text-align: center; }
 footer h5 { padding: 10px; }
