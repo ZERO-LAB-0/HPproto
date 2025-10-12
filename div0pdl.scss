@@ -192,16 +192,40 @@ h5 a{
 }
 .spec{
 	margin-top: 2em;
-	padding: 2em 5em 2em 5em;
+	margin-bottom: 2em;
+	padding: 2em;
 	background-color: white;
 	border-radius: 10px;
  	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 		
 }
+.datasheet{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 2em;
+	background: var(--colbk);
+		color: var(--colwh);
+	border-radius: 10px;
+ 	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	position: relative;
+	transition: 0.2s ease;
+	& a{
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			width: 100%;
+	}
+	&:hover{
+		background: var(--colwh);
+		color: var(--colbk);
+	}
+}
 .cap{
 	display: flex;
 	& p{
 		width: 50%;
+		vertical-align: middle;
 	}
 	border-bottom: 1px solid var(--colbk);
 	padding: 1em;
@@ -249,6 +273,9 @@ h2 {
 			
 			min-width: 50px;
 		}
+	}
+	.datasheet{
+		
 	}
 }
 	

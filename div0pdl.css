@@ -48,10 +48,14 @@ h5 a { font-size: 1em; }
 .top-R .extras .caution .caution-text img { width: 3.5em; mix-blend-mode: multiply; }
 .top-R .extras .caution .caution-text h3 { padding-right: 0.5em; font-size: 16px; align-self: flex-end; }
 
-.spec { margin-top: 2em; padding: 2em 5em 2em 5em; background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+.spec { margin-top: 2em; margin-bottom: 2em; padding: 2em; background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+
+.datasheet { margin-top: 2em; margin-bottom: 2em; padding: 2em; background: var(--colbk); color: var(--colwh); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); position: relative; transition: 0.2s ease; }
+.datasheet a { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+.datasheet:hover { background: var(--colwh); color: var(--colbk); }
 
 .cap { display: flex; border-bottom: 1px solid var(--colbk); padding: 1em; }
-.cap p { width: 50%; }
+.cap p { width: 50%; vertical-align: middle; }
 
 h2 { font-size: 1.5rem; margin-bottom: 0.75rem; border-left: 4px solid #000; padding-left: 0.5rem; }
 
