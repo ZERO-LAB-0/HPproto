@@ -54,6 +54,9 @@ h5 a { font-size: 1em; }
 .datasheet a { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 .datasheet:hover { background: var(--colwh); color: var(--colbk); }
 
+.oldlink { text-align: right; font-size: 1em; }
+.oldlinkp:hover { background: var(--colbk); color: var(--colwh); }
+
 .cap { display: flex; border-bottom: 1px solid var(--colbk); padding: 1em; }
 .cap p { width: 50%; vertical-align: middle; }
 
